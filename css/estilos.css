@@ -1,4 +1,4 @@
-/* Paleta de Cores Tema Sasuke / Rinnegan */
+
 :root {
     --cor-fundo-escuro: #0a0a10;
     --cor-card-fundo: #1a1a2e;
@@ -18,17 +18,16 @@ body {
     background-size: 200% 200%;
     animation: animacaoFundoChakra 20s ease-in-out infinite;
 
-    min-height: 100vh; /* Garante que o fundo cubra a tela toda */
+    min-height: 100vh;
     
-    /* Estas 3 linhas centralizam o container na tela */
+  
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0; /* Adiciona um respiro em cima e embaixo */
+    padding: 20px 0; 
 }
 
-/* Container Principal do Portfólio */
-/* Container Principal do Portfólio */
+
 #portfolio-container {
     max-width: 960px;
     width: 90%;
@@ -37,28 +36,28 @@ body {
     border: 1px solid var(--cor-rinnegan-roxo);
     border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 0 40px rgba(126, 87, 194, 0.4); /* Sombra roxa neon */
+    box-shadow: 0 0 40px rgba(126, 87, 194, 0.4); 
 }
 
-/* Estilo Padrão dos "Cards" */
+
 header, section, footer {
-    padding: 25px 0; /* Apenas um espaçamento vertical */
-    border-bottom: 1px solid var(--cor-rinnegan-roxo); /* Uma linha roxa para separar as seções */
+    padding: 25px 0; 
+    border-bottom: 1px solid var(--cor-rinnegan-roxo);
     margin-bottom: 20px;
 }
 
-/* Remove a borda da última seção para um acabamento melhor */
+
 section:last-of-type, footer {
     border-bottom: none;
 }
 
-/* Estilos Específicos */
+
 header {
     text-align: center;
 }
 
 h1, h2 {
-    color: var(--cor-rinnegan-roxo); /* Usando a variável de cor */
+    color: var(--cor-rinnegan-roxo); 
 }
 
 ul {
@@ -71,14 +70,14 @@ li {
 }
 
 a {
-    color: var(--cor-chidori-azul); /* Usando a cor do Chidori para links! */
+    color: var(--cor-chidori-azul); 
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--cor-sharingan-vermelho); /* Links ficam vermelhos no hover! */
-    text-decoration: none; /* Mantemos sem sublinhado por enquanto */
+    color: var(--cor-sharingan-vermelho); 
+    text-decoration: none; 
 }
 
 
@@ -89,7 +88,7 @@ a:hover {
     100% { background-position: 0% 50%; }
 }
 
-/* Animação de Scroll-Reveal (mantida) */
+
 section {
     opacity: 0;
     transform: translateY(20px);
@@ -101,7 +100,7 @@ section.visible {
     transform: translateY(0);
 }
 
-/* --- Media Query para Responsividade --- */
+
 @media (max-width: 768px) {
     #portfolio-container {
         margin: 20px auto;
@@ -113,50 +112,49 @@ section.visible {
     }
 }
 
-/* Estilo para a imagem de perfil */
+
 #sobre-mim img {
-    width: 150px; /* Tamanho fixo para a imagem */
-    height: 150px; /* Para garantir que seja um círculo perfeito */
-    border-radius: 50%; /* Transforma a imagem em um círculo */
-    border: 3px solid var(--cor-rinnegan-roxo); /* Uma borda roxa estilo Rinnegan */
-    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
-    margin-top: 20px; /* Espaçamento da sua foto para o texto acima */
-    box-shadow: 0 0 15px var(--cor-rinnegan-roxo); /* Um brilho sutil */
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    border: 3px solid var(--cor-rinnegan-roxo); 
+    object-fit: cover; 
+    margin-top: 20px; 
+    box-shadow: 0 0 15px var(--cor-rinnegan-roxo); 
 }
 
-/* --- Animação de Digitação --- */
 
-/* 1. Estilos para o container do título */
+
+
 h1 {
     color: var(--cor-rinnegan-roxo);
-    font-family: 'Source Code Pro', monospace; /* Uma fonte estilo "código" */
-    overflow: hidden; /* Esconde o texto que "ainda não foi digitado" */
-    border-right: .15em solid var(--cor-chidori-azul); /* O cursor piscando */
-    white-space: nowrap; /* Garante que o texto não quebre a linha */
-    margin: 0 auto; /* Centraliza o elemento */
-    letter-spacing: .15em; /* Espaçamento entre as letras */
+    font-family: 'Source Code Pro', monospace; 
+    overflow: hidden; 
+    border-right: .15em solid var(--cor-chidori-azul); 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em;
     animation: 
-        typing 3.5s steps(11, end), /* Animação de digitação */
-        blink-caret .75s step-end infinite; /* Animação do cursor piscando */
+        typing 3.5s steps(11, end), 
+        blink-caret .75s step-end infinite; 
 }
 
-/* 2. O "roteiro" da animação de digitação */
+
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
 }
 
-/* 3. O "roteiro" da animação do cursor piscando */
+
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: var(--cor-chidori-azul); }
 }
 
-/* Quando a classe 'typing-done' é adicionada pelo JS... */
+
 h1.typing-done {
-    /* ...para completamente TODAS as animações no h1... */
     animation: none;
     
-    /* ...e garante que a borda (cursor) fique transparente para sempre. */
+
     border-right-color: transparent;
 }
